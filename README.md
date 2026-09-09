@@ -1,5 +1,11 @@
 # 🛒 Walmart Sales Analysis
 
+## 📌 Dashboard Preview
+
+![Walmart Sales Dashboard](dashboard.png)
+
+---
+
 ## 📌 Project Overview
 
 This project is an end-to-end **Walmart Sales Analysis** project that demonstrates the complete data analytics workflow using **Python, MySQL, SQL, and Power BI**.
