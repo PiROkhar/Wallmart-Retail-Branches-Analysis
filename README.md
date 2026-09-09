@@ -190,10 +190,8 @@ The dashboard provides an overview of key performance indicators and allows user
 
 ## 📌 Dashboard Preview
 
-> Add your dashboard image to your GitHub repository as `dashboard.png`.
-
 ```markdown
-![Walmart Sales Dashboard](dashboard.png)
+!dashboard.png
 ```
 
 ## 📊 Dashboard KPIs
