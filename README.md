@@ -2,11 +2,11 @@
 
 ## 📌 Project Overview
 
-This project focuses on performing an end-to-end **Walmart Sales Analysis** using Python and MySQL.
+This project is an end-to-end **Walmart Sales Analysis** project that demonstrates the complete data analytics workflow using **Python, MySQL, SQL, and Power BI**.
 
-The project begins with a raw Walmart sales dataset, which is cleaned and preprocessed using Python. After cleaning the data and handling missing values, the processed dataset is loaded into a local MySQL database for further analysis.
+The project begins with a raw Walmart sales dataset, which is cleaned and preprocessed using Python. After handling missing and empty values, new calculated columns are created to prepare the data for analysis.
 
-The main goal of this project is to use data analysis techniques and SQL queries to answer important business questions related to sales, customers, branches, payment methods, product categories, and revenue.
+The cleaned dataset is then loaded into a local **MySQL database**, where SQL queries are used to analyze sales performance and solve business problems. Finally, the data is visualized using an interactive **Power BI Dashboard** to present key insights related to sales, profit, customers, branches, cities, categories, and payment methods.
 
 ---
 
@@ -20,7 +20,9 @@ The main objectives of this project are:
 - Create a new `total_amount` column for sales analysis.
 - Connect the cleaned dataset to a local MySQL database.
 - Perform business analysis using SQL queries.
-- Extract meaningful insights from Walmart sales data.
+- Create an interactive Power BI Dashboard.
+- Analyze sales, profit, branches, cities, categories, and payment methods.
+- Extract meaningful business insights from Walmart sales data.
 
 ---
 
@@ -29,12 +31,11 @@ The main objectives of this project are:
 | Technology | Purpose |
 |-----------|---------|
 | Python | Data cleaning and preprocessing |
-| Pandas | Data manipulation and analysis |
-| MySQL | Data storage and analysis |
+| Pandas | Data manipulation and transformation |
+| MySQL | Data storage and management |
 | SQL | Business analysis and querying |
+| Power BI | Interactive dashboard and data visualization |
 | PyMySQL / SQLAlchemy | Connecting Python with MySQL |
-
-The project workflow uses Python libraries for data processing and database connectivity, similar to the environment setup outlined in the project reference. :contentReference[oaicite:1]{index=1}
 
 ---
 
@@ -54,6 +55,12 @@ Walmart-Sales-Analysis/
 │
 ├── walmart_analysis.sql
 │   └── SQL Business Analysis Queries
+│
+├── Walmart_Sales_Dashboard.pbix
+│   └── Power BI Dashboard
+│
+├── dashboard.png
+│   └── Dashboard Preview
 │
 ├── requirements.txt
 │
@@ -95,6 +102,9 @@ Walmart-Sales-Analysis/
             SQL Data Analysis
                      │
                      ▼
+             Power BI Dashboard
+                     │
+                     ▼
             Business Insights
 ```
 
@@ -102,17 +112,18 @@ Walmart-Sales-Analysis/
 
 # 🧹 Data Cleaning and Preprocessing
 
-The raw Walmart sales dataset was cleaned using **Python and Pandas**.
+The raw Walmart sales dataset was cleaned and preprocessed using **Python and Pandas**.
 
 The following steps were performed:
 
-- Loaded the Walmart sales dataset.
+- Loaded the raw Walmart sales dataset.
 - Checked the dataset structure.
-- Inspected data types.
+- Inspected column names and data types.
 - Identified missing and empty values.
 - Removed or handled unnecessary empty values.
 - Cleaned the dataset for further analysis.
 - Prepared the dataset for database integration.
+- Exported the cleaned dataset for further use in MySQL and Power BI.
 
 ---
 
@@ -133,6 +144,7 @@ This newly created column was useful for analyzing:
 - Product Performance
 - Branch Performance
 - Category Performance
+- City Performance
 
 ---
 
@@ -157,14 +169,158 @@ The project analyzes multiple aspects of Walmart sales data, including:
 
 - 💳 Payment Method Analysis
 - 🏢 Branch Performance
+- 🏙️ City Performance
 - 🛍️ Product Category Analysis
 - 👥 Customer Purchasing Behavior
 - ⭐ Customer Ratings
-- 📅 Daily Sales Trends
+- 📅 Yearly Sales Trends
 - 🕒 Sales Shift Analysis
-- 📦 Quantity Sold Analysis
+- 📦 Quantity and Order Analysis
 - 💰 Revenue Analysis
-- 📊 Category Performance
+- 📊 Profit Analysis
+- 📈 Category Performance
+
+---
+
+# 📊 Power BI Dashboard
+
+An interactive **Power BI Dashboard** was created to visualize the Walmart sales data and present important business insights in an easy-to-understand format.
+
+The dashboard provides an overview of key performance indicators and allows users to filter the data based on different business dimensions.
+
+## 📌 Dashboard Preview
+
+> Add your dashboard image to your GitHub repository as `dashboard.png`.
+
+```markdown
+![Walmart Sales Dashboard](dashboard.png)
+```
+
+## 📊 Dashboard KPIs
+
+The dashboard highlights the following key metrics:
+
+- 🧾 **Total Invoices**
+- 💰 **Total Sales**
+- 📈 **Total Profit**
+- ⭐ **Average Customer Rating**
+
+## 📈 Dashboard Visualizations
+
+The Power BI Dashboard includes:
+
+### 🏙️ Top 5 Cities by Profit
+
+Displays the top-performing cities based on total profit.
+
+This helps identify:
+
+- High-performing locations.
+- Cities generating the most profit.
+- Areas with strong business performance.
+
+---
+
+### 🏢 Top 5 Branches by Profit
+
+Displays the branches generating the highest profit.
+
+This helps compare:
+
+- Branch performance.
+- Profit contribution.
+- High-performing branches.
+
+---
+
+### 💳 Payment Method Analysis
+
+A pie chart is used to analyze customer payment preferences.
+
+The dashboard compares payment methods such as:
+
+- Cash
+- Credit Card
+- E-Wallet
+
+This helps understand how customers prefer to make payments.
+
+---
+
+### 📅 Total Profit Yearly
+
+A line chart displays profit trends across different years.
+
+This visualization helps identify:
+
+- Profit growth.
+- Profit decline.
+- Yearly performance trends.
+
+---
+
+### 🛍️ Orders by Category
+
+A treemap is used to visualize the number of orders across different product categories.
+
+This helps identify:
+
+- Popular product categories.
+- Categories with high order volume.
+- Category-wise sales performance.
+
+---
+
+# 🎛️ Interactive Filters
+
+The Power BI Dashboard includes interactive filters that allow users to explore the data dynamically.
+
+The available filters include:
+
+### 🛍️ Category
+
+Users can filter the dashboard based on categories such as:
+
+- Electronic Accessories
+- Fashion Accessories
+- Food and Beverages
+- Health and Beauty
+- Home and Lifestyle
+- Sports and Travel
+
+### 💳 Payment Method
+
+Users can filter the dashboard based on:
+
+- Cash
+- Credit Card
+- E-Wallet
+
+### 📅 Time Period
+
+Users can analyze data based on different years.
+
+### 🏙️ City
+
+Users can filter and analyze data based on different cities.
+
+These filters make the dashboard interactive and allow users to perform deeper analysis.
+
+---
+
+# 💡 Key Dashboard Insights
+
+The Power BI Dashboard helps answer questions such as:
+
+- Which cities generate the highest profit?
+- Which branches are the most profitable?
+- What payment methods are preferred by customers?
+- How does profit change over the years?
+- Which product categories receive the highest number of orders?
+- How many invoices are generated?
+- What is the total sales amount?
+- What is the overall profit?
+- What is the average customer rating?
 
 ---
 
@@ -176,11 +332,15 @@ The project analyzes multiple aspects of Walmart sales data, including:
 git clone https://github.com/your-username/Walmart-Sales-Analysis.git
 ```
 
+---
+
 ## 2. Navigate to the Project Folder
 
 ```bash
 cd Walmart-Sales-Analysis
 ```
+
+---
 
 ## 3. Create a Virtual Environment
 
@@ -210,17 +370,16 @@ source my_env/bin/activate
 pip install pandas pymysql sqlalchemy
 ```
 
-You can also install additional libraries depending on your database connection and analysis requirements.
-
 ---
 
 ## 5. Run Data Cleaning
 
-Run the Python or Jupyter Notebook file to:
+Run the Python script or Jupyter Notebook to:
 
 - Load the raw dataset.
 - Clean the data.
 - Handle missing values.
+- Remove empty values.
 - Create the `total_amount` column.
 - Generate the cleaned dataset.
 
@@ -257,7 +416,27 @@ Execute the SQL queries from:
 walmart_analysis.sql
 ```
 
-Use the queries to answer the business problems and generate insights from the Walmart sales dataset.
+Use the queries to perform business analysis and extract insights from the Walmart sales dataset.
+
+---
+
+## 9. Open the Power BI Dashboard
+
+Open the following file using Power BI Desktop:
+
+```text
+Walmart_Sales_Dashboard.pbix
+```
+
+Use the interactive filters to explore:
+
+- Categories
+- Cities
+- Payment Methods
+- Time Periods
+- Sales
+- Profit
+- Branch Performance
 
 ---
 
@@ -265,15 +444,16 @@ Use the queries to answer the business problems and generate insights from the W
 
 This project demonstrates the following skills:
 
-### Python
+## 🐍 Python
 
 - Data Cleaning
 - Data Manipulation
+- Data Transformation
 - Handling Missing Values
 - Feature Engineering
 - Pandas
 
-### SQL
+## 🗄️ SQL
 
 - SELECT Statements
 - WHERE Clause
@@ -284,7 +464,7 @@ This project demonstrates the following skills:
 - Window Functions
 - Common Table Expressions (CTEs)
 
-### Database
+## 💾 Database
 
 - MySQL
 - Database Creation
@@ -292,12 +472,25 @@ This project demonstrates the following skills:
 - Data Import
 - Python Database Connectivity
 
-### Data Analysis
+## 📊 Power BI
+
+- Data Visualization
+- KPI Cards
+- Treemaps
+- Pie Charts
+- Line Charts
+- Interactive Filters
+- Dashboard Design
+- Business Reporting
+
+## 📈 Data Analysis
 
 - Sales Analysis
 - Revenue Analysis
+- Profit Analysis
 - Customer Analysis
 - Branch Analysis
+- City Analysis
 - Product Analysis
 - Business Problem Solving
 
@@ -310,12 +503,16 @@ Through this project, I gained practical experience in:
 - Working with real-world sales datasets.
 - Cleaning and preprocessing data using Python.
 - Handling missing and empty values.
-- Creating new calculated columns.
 - Performing feature engineering.
+- Creating calculated columns.
 - Connecting Python to MySQL.
 - Loading datasets into a database.
 - Writing SQL queries for business analysis.
-- Using SQL to solve real-world business problems.
+- Analyzing business performance using SQL.
+- Creating interactive dashboards using Power BI.
+- Designing KPI cards and visualizations.
+- Using filters and slicers for interactive analysis.
+- Presenting data insights visually.
 - Understanding the complete end-to-end data analytics workflow.
 
 ---
@@ -324,12 +521,15 @@ Through this project, I gained practical experience in:
 
 Future improvements for this project may include:
 
-- Creating an interactive Power BI dashboard.
-- Adding data visualizations using Python.
+- Adding more advanced Power BI visualizations.
+- Creating additional DAX measures.
 - Automating the ETL process.
-- Creating a data pipeline for automatic database updates.
+- Creating a complete automated data pipeline.
 - Adding more advanced SQL analysis.
-- Building a sales prediction model using Machine Learning.
+- Adding predictive sales analysis using Machine Learning.
+- Publishing the dashboard using Power BI Service.
+- Adding real-time data updates.
+- Creating a business performance forecasting model.
 
 ---
 
@@ -341,26 +541,41 @@ Aspiring Data Analyst
 
 ### Skills
 
-**Python | SQL | MySQL | Pandas | Data Cleaning | Data Analysis | Data Visualization**
+**Python | SQL | MySQL | Power BI | Pandas | Data Cleaning | Data Analysis | Data Visualization**
 
 ---
 
 # ⭐ Conclusion
 
-This project demonstrates an end-to-end Data Analytics workflow using **Python and MySQL**.
+This project demonstrates a complete **end-to-end Data Analytics workflow** using:
 
-The Walmart sales dataset was first cleaned and preprocessed using Python. Missing and empty values were handled, and a new `total_amount` column was created for improved sales analysis.
+**Python → MySQL → SQL → Power BI**
 
-The cleaned dataset was then connected to a local MySQL database, where SQL queries were used to solve important business problems and extract meaningful insights.
+The Walmart sales dataset was first cleaned and preprocessed using Python. Missing and empty values were handled, and a new `total_amount` column was created to improve sales analysis.
+
+The cleaned dataset was then connected to a local MySQL database, where SQL queries were used to perform business analysis and extract meaningful insights.
+
+Finally, an interactive Power BI Dashboard was created to visualize important KPIs and business metrics related to:
+
+- Sales
+- Profit
+- Cities
+- Branches
+- Categories
+- Payment Methods
+- Orders
+- Customer Ratings
 
 This project helped strengthen practical skills in:
 
-- Data Cleaning
-- Python
-- SQL
-- MySQL
-- Database Integration
-- Business Analysis
+- 🐍 Python
+- 🗄️ SQL
+- 💾 MySQL
+- 📊 Power BI
+- 🧹 Data Cleaning
+- 📈 Data Analysis
+- 📉 Data Visualization
+- 💼 Business Analysis
 
 ---
 
