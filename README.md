@@ -191,7 +191,7 @@ The dashboard provides an overview of key performance indicators and allows user
 ## 📌 Dashboard Preview
 
 ```markdown
-!dashboard.png
+![Walmart Sales Dashboard](images/walmart_dashboard.png)
 ```
 
 ## 📊 Dashboard KPIs
